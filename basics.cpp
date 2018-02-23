@@ -4,6 +4,7 @@
 #include <iterator>
 #include <functional>
 #include <exception>      // std::exception
+#include <stdlib.h>
 
 
 using namespace std;
@@ -151,7 +152,7 @@ static void t(int ans, RExpr *e){
 */
 
 
-
+/*
 template <typename K, typename V>
 class IMap{
     public:
@@ -182,6 +183,15 @@ class IMap{
     IMap(map<K,V> hm){ this->hm = hm;}
 };
 
+*/
+
+
+
+static void t(int ans, RExpr *e){
+    Var::reset();
+    cout << e->toString() << " =>" << endl;
+    
+}
 
 
 
@@ -193,6 +203,8 @@ int main(void){
   RExpr *ex1 = new RLet(x, new RNum(8),
                   new RAdd(new RLet(x, new RNum(10), new RRef(x)),new RRef(x)));
   cout << ex1->toString() << endl;
+
+    t(5, new RNum(5));
 
 
 

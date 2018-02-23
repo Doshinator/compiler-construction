@@ -31,3 +31,12 @@ class IMap{
     private:
     IMap(map<K,V> hm){ this->hm = hm;}
 };
+
+
+
+
+class IMap<K,V>{
+
+
+
+};
